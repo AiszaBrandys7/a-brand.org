@@ -1,376 +1,955 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>a-brand.org — Clarity to rise. Power to build.</title>
-<meta name="description" content="We connect strategy, technology, and creativity to help brands grow worldwide — blending SEO, AI, automation, and content into measurable results.">
-<link rel="canonical" href="https://a-brand.org/">
-<meta name="theme-color" content="#05070d">
-<meta name="robots" content="index,follow">
-<meta name="referrer" content="strict-origin-when-cross-origin">
-<meta name="google-site-verification" content="y9ypH5NhfY0-8CCG6Z3DU1I8w4OrVpMtUY0CQt4I_so">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VRPBHJ05ZL"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-VRPBHJ05ZL");</script>
-<meta property="og:title" content="a-brand.org — Clarity to rise. Power to build.">
-<meta property="og:description" content="SEO • AI • Strategy. We connect. We provide. We help.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://a-brand.org/">
-<meta property="og:image" content="https://a-brand.org/assets/moon-preview.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="a-brand.org — Clarity to rise. Power to build.">
-<meta name="twitter:description" content="SEO • AI • Strategy. We connect. We provide. We help.">
-<meta name="twitter:image" content="https://a-brand.org/assets/moon-preview.jpg">
-<!-- Preload hero for faster LCP -->
-<link rel="preload"
-      as="image"
-      href="assets/hero-sun.jpg"
-      imagesrcset="assets/hero-sun.jpg 1200w, assets/hero-sun.jpg 2000w"
-      imagesizes="(max-width: 900px) 100vw, 520px"
-      fetchpriority="high">
-<!-- Preconnect Formspree (optional) -->
-<link rel="preconnect" href="https://formspree.io" crossorigin>
-
-<!-- Open Graph -->
-<meta property="og:title" content="a-brand.org — Clarity to rise. Power to build.">
-<meta property="og:description" content="SEO • AI • Strategy. We connect. We provide. We help.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://a-brand.org/">
-<meta property="og:image" content="https://a-brand.org/assets/hero-sun.jpg">
-
-<!-- Schema.org -->
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Organization",
-  "name":"A-Brand Marketing",
-  "url":"https://a-brand.org/",
-  "areaServed":"Worldwide",
-  "email":"hello@a-brand.org",
-  "logo":"https://a-brand.org/favicon.svg",
-  "contactPoint":[{"@type":"ContactPoint","contactType":"consulting","email":"hello@a-brand.org","availableLanguage":["en","pl","nl","any"]}]
-}
-</script>
-
-<style>
-:root{
-  --bg:#05070d;            /* deeper cosmic black */
-  --fg:#f3f6ff;
-  --muted:#b7c0d9;
-  --card:#0f1422;
-  --border:#1d2233;
-  --brand:#6ea8ff;
-  --brand2:#6ee7b7;
-  --shadow:0 10px 40px rgba(0,0,0,.35);
-  --pad-lg:108px; --pad-md:76px;
-}
-
-/* Base */
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0; color:var(--fg);
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Arial,"Helvetica Neue",sans-serif;
-  line-height:1.6;
-  /* cosmic background matching images */
-  background:
-    radial-gradient(1200px 800px at 70% -10%, rgba(255,190,120,.06) 0%, rgba(255,140,80,.02) 35%, transparent 60%),
-    radial-gradient(900px 600px at 10% 110%, rgba(110,231,183,.04) 0%, rgba(110,231,183,0) 55%),
-    var(--bg);
-  background-attachment: fixed;
-}
-a{color:inherit;text-decoration:none}
-.container{max-width:1120px;margin:0 auto;padding:0 20px}
-section{padding:var(--pad-lg) 0}
-@media (max-width:900px){section{padding:var(--pad-md) 0}}
-
-header.site{position:sticky;top:0;z-index:40;background:rgba(5,7,13,.55);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--border)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:800;text-transform:lowercase}
-.logo-mark{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--brand),var(--brand2));box-shadow:var(--shadow)}
-.nav a{margin:0 12px;font-weight:600}
-.cta{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#081019;font-weight:800}
-.ghost{background:transparent;border:1px solid var(--border);color:var(--fg)}
-.nav a.active{border-bottom:2px solid var(--brand)}
-
-.badge{display:inline-block;font-size:12px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--border);color:var(--muted)}
-h1{font-size:clamp(32px,5vw,56px);line-height:1.1;margin:0 0 14px}
-h2{font-size:28px;margin:0 0 12px}
-.sub{color:var(--muted);margin:0 0 28px}
-.btn-row{display:flex;gap:12px;flex-wrap:wrap}
-
-.grid{display:grid;gap:22px}
-.grid-2{grid-template-columns:repeat(2,1fr)}
-.grid-3{grid-template-columns:repeat(3,1fr)}
-@media (max-width:900px){.grid-2,.grid-3{grid-template-columns:1fr}}
-
-.card{background:var(--card);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow)}
-
-/* HERO */
-.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;min-height:64vh}
-@media (max-width:900px){.hero{grid-template-columns:1fr}}
-
-.hero-visual{
-  position:relative;
-  border:none;              /* no visible frame */
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 18px 50px rgba(0,0,0,.45);
-  isolation:isolate;
-  background:transparent;
-}
-.hero-visual img{
-  width:100%;height:100%;object-fit:cover;display:block;
-  filter:saturate(110%) contrast(105%) brightness(105%);
-}
-.hero-visual::after{ content:none; }
-
-@media (max-width:600px){ .hero-visual{ display:none; } } /* hide sun on very small screens */
-
-/* SERVICES */
-.services .item{padding:22px}
-.services h3{margin:10px 0 8px;font-size:18px}
-/* equalize intro paragraph height (optional) */
-.services .item > p{ min-height:56px; }
-
-/* PROCESS */
-.process .step{padding:18px;border-left:4px solid var(--brand);background:var(--card);border-radius:12px}
-
-/* CASES */
-.cs-card{padding:18px}
-.cs-blurb{color:var(--muted);min-height:54px;display:flex;align-items:flex-start}
-@media (max-width:900px){.cs-blurb{min-height:auto}}
-
-/* TESTIMONIALS */
-.slider{position:relative;max-width:820px;margin:0 auto}
-.slide{display:none;padding:28px 48px;font-style:italic}
-.slide.active{display:block}
-.arrow{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:1px solid var(--border);background:rgba(255,255,255,.06);color:var(--fg);display:grid;place-items:center;cursor:pointer;user-select:none}
-.arrow.left{left:-64px}
-.arrow.right{right:-64px}
-@media (max-width:900px){.arrow.left{left:-12px}.arrow.right{right:-12px}}
-
-/* ROI */
-.roi{padding:20px}
-.roi .row{display:grid;gap:12px;grid-template-columns:repeat(3,1fr)}
-.roi .row2{display:grid;gap:12px;grid-template-columns:repeat(2,1fr);margin-top:12px}
-.roi input, .roi select{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--border);background:var(--bg);color:var(--fg)}
-.roi button{margin-top:4px}
-
-/* WORLDWIDE / EARTH */
-.contact-wrap{display:grid;gap:32px;grid-template-columns:1.1fr .9fr;align-items:center}
-@media (max-width:900px){.contact-wrap{grid-template-columns:1fr}}
-form.contact{display:grid;gap:12px}
-label{display:block;font-weight:600}
-input,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--border);background:var(--bg);color:var(--fg)}
-input:focus,textarea:focus,button:focus,summary:focus{outline:3px solid rgba(110,231,183,.35)}
-
-.earth-wrap{
-  position:relative;
-  border:none;               /* no frame */
-  border-radius:16px;
-  overflow:hidden;
-  box-shadow:0 18px 50px rgba(0,0,0,.45);
-  background:transparent;
-}
-.earth-wrap img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(108%) contrast(108%)}
-.earth-overlay{position:absolute;inset:auto 0 0 0;background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.55) 80%);padding:18px}
-.earth-overlay h3{margin:0;font-size:16px;color:#e6fff4;letter-spacing:.4px}
-
-/* Floating / subtle parallax */
-.float{animation: floatY 14s ease-in-out infinite; will-change: transform;}
-.float-slow{animation-duration:18s}
-.float-fast{animation-duration:10s}
-@keyframes floatY{ 0%,100%{ transform: translateY(0) } 50%{ transform: translateY(-6px) } }
-
-/* separators */
-.sep{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent);margin:52px 0}
-
-footer{padding:44px 0;border-top:1px solid var(--border);color:var(--muted);text-align:center}
-.muted{color:var(--muted)}
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
-.alert{margin-top:8px}
-.alert.success{color:#7fffd4}
-.alert.error{color:#ffb3b3}
-</style>
-</head>
-<body>
-<a class="sr-only" href="#main">Skip to content</a>
-
-<header class="site">
-  <div class="container nav" role="navigation" aria-label="Main navigation">
-    <a class="logo" href="#"><span class="logo-mark" aria-hidden="true"></span><span>a-brand.org</span></a>
-    <nav id="topnav">
-      <a href="#services">Services</a>
-      <a href="#process">Process</a>
-      <a href="#cases">Case studies</a>
-      <a href="#roi">ROI</a>
-      <a href="#testimonials"></a>
-      <a href="#contact" class="cta" aria-label="Go to contact">Request a diagnostic</a>
-    </nav>
-  </div>
-</header>
-
-<main id="main">
-  <!-- HERO -->
-  <section class="hero container" aria-label="Hero">
-    <div>
-      <span class="badge">SEO • AI • Strategy • Worldwide</span>
-      <h1>Clarity to rise. Power to build.</h1>
-      <p class="sub">We connect strategy, technology, and creativity to help brands grow worldwide — blending SEO, automation, AI, and content into measurable, human-centered outcomes.</p>
-      <div class="btn-row">
-        <a class="cta" href="#contact">Request a diagnostic</a>
-        <a class="cta ghost" href="#services">Start your 90-day plan</a>
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1,viewport-fit=cover"
+  /><title>a-brand.org — Clarity to rise. Power to build.</title
+  ><link rel="preload" as="image" href="assets/hero-a-brand.webp" /><meta
+    name="description"
+    content="We connect strategy, technology, and creativity to help brands grow worldwide — blending SEO, AI, automation, and content into measurable, human-centered outcomes."
+  /><link rel="icon" href="assets/favicon-a.svg" type="image/svg+xml" /><meta
+    name="theme-color"
+    content="#05070d"
+  /><style>
+    :root {
+      --bg: #05070d;
+      --fg: #f3f6ff;
+      --muted: rgba(243, 246, 255, 0.62);
+      --card: rgba(9, 14, 22, 0.55);
+      --brand1: #6ee7b7;
+      --brand2: #6ea8ff;
+      --radius-card: 18px;
+      --radius-field: 12px;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body,
+    html {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(
+          1100px 850px at 70% -8%,
+          rgba(110, 231, 183, 0.12) 0,
+          rgba(5, 7, 13, 0) 70%
+        ),
+        radial-gradient(
+          900px 650px at 8% 105%,
+          rgba(95, 163, 255, 0.07) 0,
+          rgba(5, 7, 13, 0) 65%
+        ),
+        var(--bg);
+      background-attachment: fixed;
+      color: var(--fg);
+      font-family:
+        system-ui,
+        -apple-system,
+        Segoe UI,
+        Roboto,
+        Ubuntu,
+        Cantarell,
+        Arial,
+        "Helvetica Neue",
+        sans-serif;
+      line-height: 1.55;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    header.site {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(5, 7, 13, 0.55);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(243, 246, 255, 0.02);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 62px;
+      gap: 14px;
+    }
+    .logo {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-weight: 800;
+      text-transform: lowercase;
+      white-space: nowrap;
+    }
+    .logo-mark {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--brand1), var(--brand2));
+    }
+    #topnav {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+    #topnav a {
+      white-space: nowrap;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 16px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--brand1), var(--brand2));
+      color: #041017;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition:
+        transform 0.1s ease-out,
+        box-shadow 0.1s ease-out;
+    }
+    .cta.secondary {
+      background: 0 0;
+      border: 1px solid rgba(243, 246, 255, 0.16);
+      color: var(--fg);
+    }
+    .cta:active {
+      transform: scale(0.995);
+    }
+    @media (min-width: 992px) {
+      body::after,
+      body::before {
+        content: "";
+        position: fixed;
+        pointer-events: none;
+        filter: blur(70px);
+        opacity: 0.65;
+        z-index: -1;
+      }
+      body::before {
+        top: -120px;
+        right: -120px;
+        width: 360px;
+        height: 360px;
+        background: radial-gradient(
+          circle,
+          rgba(72, 225, 189, 0.35),
+          rgba(2, 6, 12, 0)
+        );
+      }
+      body::after {
+        bottom: -140px;
+        left: -120px;
+        width: 420px;
+        height: 420px;
+        background: radial-gradient(
+          circle,
+          rgba(77, 166, 255, 0.26),
+          rgba(2, 6, 12, 0)
+        );
+      }
+    }
+    main > section {
+      padding: 54px 0 54px;
+    }
+    #cases + #roi,
+    #process + #cases,
+    #services + #process {
+      margin-top: 40px;
+    }
+    @media (max-width: 820px) {
+      main > section {
+        padding: 42px 0 44px;
+      }
+      #cases + #roi,
+      #process + #cases,
+      #services + #process {
+        margin-top: 32px;
+      }
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+      gap: 34px;
+      align-items: center;
+      padding-top: 74px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 13px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.02);
+      font-size: 0.7rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: clamp(34px, 4.4vw, 58px);
+      line-height: 1.02;
+      margin: 0 0 16px;
+    }
+    .sub {
+      color: var(--muted);
+      max-width: 540px;
+      margin-bottom: 24px;
+    }
+    .btn-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .hero-visual {
+      display: flex;
+      max-width: 360px;
+      margin-left: auto;
+      width: min(360px, 40vw);
+      aspect-ratio: 1/1;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    @media (max-width: 900px) {
+      header.site {
+        height: 60px;
+      }
+      header.site .nav {
+        height: 60px;
+        gap: 10px;
+      }
+      #topnav {
+        max-width: 60vw;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      #topnav::-webkit-scrollbar {
+        display: none;
+      }
+      .logo span:last-child {
+        font-size: 14.5px;
+      }
+      .hero {
+        display: block;
+        padding-top: 68px;
+      }
+      .hero-visual {
+        display: none;
+      }
+      .btn-row {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .btn-row .cta {
+        width: 100%;
+        border-radius: 999px;
+      }
+      .sub {
+        max-width: 100%;
+      }
+    }
+    .grid {
+      display: grid;
+      gap: 22px;
+    }
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    #roi .roi-card,
+    #roi .roi-contact,
+    .card,
+    .process .step {
+      background: var(--card);
+      border: 1px solid rgba(243, 246, 255, 0.03);
+      border-radius: var(--radius-card);
+      box-shadow: 0 10px 32px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(10px);
+      transition:
+        transform 0.14s ease-out,
+        box-shadow 0.14s ease-out,
+        border 0.14s ease-out;
+    }
+    #roi .roi-card:hover,
+    #roi .roi-contact:hover,
+    .card:hover,
+    .process .step:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.28);
+      border: 1px solid rgba(110, 231, 183, 0.14);
+    }
+    .services .card {
+      padding: 20px 18px 18px;
+    }
+    .services .card h3 {
+      margin: 6px 0 10px;
+    }
+    .services .card p {
+      margin-bottom: 10px;
+    }
+    @media (max-width: 900px) {
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+    .section-title {
+      position: relative;
+      padding-bottom: 1.15rem;
+      margin-bottom: 1.75rem;
+    }
+    .section-title::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 64px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--brand1), var(--brand2));
+      border-radius: 9999px;
+    }
+    .process .step {
+      padding: 18px 18px 18px;
+    }
+    .cs-card {
+      padding: 18px 18px 20px;
+    }
+    #roi .roi-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.72fr);
+      gap: 26px;
+      align-items: stretch;
+    }
+    #roi .roi-card,
+    #roi .roi-contact {
+      padding: 18px 16px 20px;
+    }
+    #roi .roi-title {
+      margin: 0 0 6px;
+    }
+    #roi .roi-sub {
+      color: rgba(243, 246, 255, 0.55);
+      font-size: 0.78rem;
+      margin-bottom: 14px;
+    }
+    #roi .roi-label {
+      display: block;
+      font-size: 0.68rem;
+      margin-bottom: 4px;
+      color: rgba(243, 246, 255, 0.7);
+    }
+    #roi .roi-input,
+    #roi select,
+    #roi textarea {
+      width: 100%;
+      background: rgba(5, 9, 15, 0.35);
+      border: 1px solid rgba(243, 246, 255, 0.03);
+      border-radius: 12px;
+      padding: 9px 11px;
+      color: var(--fg);
+      font-size: 0.78rem;
+    }
+    #roi .roi-inline {
+      display: flex;
+      gap: 10px;
+    }
+    #roi .roi-col {
+      flex: 1;
+    }
+    #roi .roi-ccy-wrap {
+      display: flex;
+      gap: 8px;
+    }
+    #roi .roi-ccy {
+      max-width: 88px;
+    }
+    #roi .roi-btn {
+      width: 100%;
+      margin-top: 10px;
+      background: linear-gradient(135deg, var(--brand1), var(--brand2));
+      color: #041017;
+      border: none;
+      border-radius: 16px;
+      height: 34px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    #roi .roi-out {
+      margin-top: 12px;
+      font-size: 0.7rem;
+      line-height: 1.35;
+    }
+    #roi .roi-note {
+      font-size: 0.66rem;
+      color: rgba(243, 246, 255, 0.52);
+      margin-top: 5px;
+    }
+    #roi .roi-contact textarea {
+      min-height: 118px;
+      resize: vertical;
+    }
+    @media (max-width: 900px) {
+      #roi .roi-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      #roi .roi-card,
+      #roi .roi-contact {
+        border-radius: 18px;
+        padding: 16px 14px 18px;
+      }
+      #roi .roi-btn,
+      #roi .roi-contact button {
+        border-radius: 999px;
+        min-height: 36px;
+      }
+      #cases .card,
+      #roi .roi-card,
+      #roi .roi-contact,
+      .card,
+      .process .step {
+        background: rgba(9, 14, 22, 0.78);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+        border: 1px solid rgba(243, 246, 255, 0.025);
+      }
+      section {
+        padding-top: 40px;
+        padding-bottom: 42px;
+      }
+      footer {
+        padding-bottom: 70px;
+      }
+      body {
+        background-attachment: scroll;
+      }
+    }
+    footer {
+      padding: 42px 0 50px;
+      text-align: center;
+      color: rgba(243, 246, 255, 0.4);
+      border-top: 1px solid rgba(243, 246, 255, 0.02);
+      margin-top: 36px;
+    }
+    footer a {
+      color: inherit;
+    }</style
+  ><link rel="canonical" href="https://a-brand-org.netlify.app" /><meta
+    property="og:title"
+    content="a-brand.org — Clarity to rise. Power to build."
+  /><meta
+    property="og:description"
+    content="SEO, AI & strategy for brands worldwide. Turn traffic into measurable, human-centered outcomes."
+  /><meta property="og:type" content="website" />
+  <header class="site">
+    <div class="container nav">
+      <a class="logo" href="index.html"><span>a-brand.org</span></a>
+      <nav id="topnav">
+        <a href="#services">Services</a> <a href="#process">Process</a>
+        <a href="#cases">Case studies</a> <a href="#roi">ROI</a>
+        <a href="privacy.html" class="cta secondary">Privacy</a>
+        <a href="#roi" class="cta">Request a diagnostic</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <section class="hero" id="hero">
+      <div>
+        <span class="badge">SEO • AI • Strategy • Worldwide</span>
+        <h1>Clarity to rise. Power to build.</h1>
+        <p class="sub">
+          We connect strategy, technology, and creativity to help brands grow
+          worldwide — blending SEO, automation, AI, and content into measurable,
+          human-centered outcomes.
+        </p>
+        <div class="btn-row">
+          <a href="#roi" class="cta">Request a diagnostic</a>
+          <a href="#services" class="cta secondary">Start your 90-day plan</a>
+        </div>
       </div>
-    </div>
-
-    <!-- Hero image: Sun -->
-    <figure class="hero-visual float" data-speed="0.12" aria-label="Solar imagery">
-      <img
-        src="assets/hero-sun.jpg"
-        srcset="assets/hero-sun.jpg 1200w, assets/hero-sun.jpg 2000w"
-        sizes="(max-width: 900px) 100vw, 520px"
-        width="2000" height="1125"
-        alt="High-resolution solar imagery (photorealistic)"
-        loading="eager" decoding="async" fetchpriority="high">
-    </figure>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services" class="container services">
-    <h2>Services</h2>
-    <p class="sub">From quick wins to full strategy and execution. Choose what moves the needle now.</p>
-    <div class="grid grid-3">
-      <article class="card item float-slow">
-        <span class="badge">SEO</span>
-        <h3>SEO Audits & Strategy</h3>
-        <p>Technical health, IA, and content architecture. A pragmatic 90-day roadmap.</p>
-        <ul>
-          <li>Technical audit & content gap</li>
-          <li>Keyword plan & site architecture</li>
-          <li>Implementation notes for dev/editorial</li>
-        </ul>
-      </article>
-      <article class="card item float">
-        <span class="badge">Growth</span>
-        <h3>Content & Growth</h3>
-        <p>Landing pages, editorial ops, conversion copy, lifecycle content.</p>
-        <ul>
-          <li>Editorial briefs & guidelines</li>
-          <li>LP/Blog/Email — end-to-end</li>
-          <li>Analytics & A/B testing</li>
-        </ul>
-      </article>
-      <article class="card item float-fast">
-        <span class="badge">AI</span>
-        <h3>AI Consulting & Enablement</h3>
-        <p>Use-cases, prompt-ops, QA, team training, policy & safety <em>(delivered in any language)</em>.</p>
-        <ul>
-          <li>Automation & workflow mapping</li>
-          <li>Quality policy & governance</li>
-          <li>Hands-on workshops — we deliver in any language</li>
-        </ul>
-      </article>
-      <article class="card item">
-        <span class="badge">Advisory</span>
-        <h3>Consulting</h3>
-        <p>Mentoring SEO/AI, sparring partner for leaders, and technical consulting across SEO, marketing, branding, and AI.</p>
-      </article>
-      <article class="card item">
-        <span class="badge">UX</span>
-        <h3>Content & UX Audits</h3>
-        <p>Narrative clarity, information design, conversion uplift.</p>
-      </article>
-      <article class="card item">
-        <span class="badge">Analytics</span>
-        <h3>Analytics & ROI</h3>
-        <p>GA4/GSC setup, KPIs, dashboards, attribution — what truly matters.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- PROCESS -->
-  <section id="process" class="container process">
-    <h2>How we work</h2>
-    <p class="sub">Clear, agile, and measurable — so you see progress fast.</p>
-    <div class="grid grid-2">
-      <div class="step">1. Discover — goals, data, quick audit (7–10 days).</div>
-      <div class="step">2. Plan — priorities and a 90-day roadmap.</div>
-      <div class="step">3. Build — implementation, content, SEO, and A/B testing.</div>
-      <div class="step">4. Measure — KPIs, reporting, next iterations.</div>
-    </div>
-  </section>
-
-  <!-- CASE STUDIES -->
-  <section id="cases" class="container">
-    <h2>Case studies</h2>
-    <p class="sub">Selected outcomes (names available under NDA). Worldwide delivery.</p>
-    <div class="grid grid-3">
-      <article class="card cs-card">
-        <h3>B2C Platform</h3>
-        <p class="cs-blurb">+118% organic YoY and 60% faster indexation across the portfolio.</p>
-        <ul><li>Technical audit + content hub</li><li>Faceted navigation optimization</li></ul>
-      </article>
-      <article class="card cs-card">
-        <h3>FinTech</h3>
-        <p class="cs-blurb">+42% demo sign-ups from SEO in 90 days, measurable pipeline growth.</p>
-        <ul><li>New LPs & IA</li><li>Copy/CTA A/B tests</li></ul>
-      </article>
-      <article class="card cs-card">
-        <h3>B2B SaaS</h3>
-        <p class="cs-blurb">–27% cost per lead via AI-ops and content systemization.</p>
-        <ul><li>Prompt templates & QA</li><li>Brief automation</li></ul>
-      </article>
-    </div>
-  </section>
-
-  <!-- ROI -->
-  <section id="roi" class="container">
-    <h2>Estimate your ROI</h2>
-    <p class="sub">Directional — to decide if now is the right moment.</p>
-    <div class="card roi">
-      <div class="row">
-        <label>Monthly target traffic<br><input type="number" id="traffic" value="10000" min="0" inputmode="numeric"></label>
-        <label>Conversion rate (%)<br>
-          <input type="range" id="cr" value="1.5" min="0" max="20" step="0.1" oninput="crOut.textContent=this.value+'%';">
-          <span id="crOut" class="muted">1.5%</span>
-        </label>
-        <label>Avg. order/lead value<br>
-          <div style="display:flex;gap:8px;align-items:center">
-            <select id="ccy" aria-label="Currency"><option>EUR</option><option>USD</option><option>PLN</option></select>
-            <input type="number" id="ltv" value="800" min="0" inputmode="numeric">
-          </div>
-        </label>
-      </div>
-      <div class="row2">
-        <label>Monthly investment<br><input type="number" id="cost" value="3000" min="0" inputmode="numeric"></label>
-        <button class="cta" id="calc" type="button">Calculate</button>
-      </div>
-      <p id="roi-out" class="muted">Your estimate will appear here.</p>
-    </div>
-  </section>
-
-  <section id="contact" class="container">
-    <div class="contact-wrap">
-      <form class="contact" id="contactForm" aria-label="Contact form" novalidate>
-        <h2>Contact</h2>
-        <label for="name">Name</label>
-        <input id="name" name="name" required>
-        <label for="email">Email</label>
-        <input id="email" type="email" name="email" required>
-        <!-- Honeypot -->
-        <input type="text" name="_extra" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <label for="msg">Message</label>
-        <textarea id="msg" name="message" rows="6" required></textarea>
-        <button class="cta" type="submit">Send</button>
-        <p class="muted alert" id="formAlert" role="status" aria-live="polite"></p>
-      </form>
-
-      <figure class="earth-wrap float" data-speed="0.1" aria-label="We work worldwide">
+      <figure class="hero-visual" aria-label="Global growth visual">
         <img
-          src="assets/earth.jpg"
-          srcset="assets/earth.jpg 1200w, assets/earth.jpg 2000w"
-          sizes="(max-width: 900px) 100vw, 440px"
-          width="1500" height="2000"
-          alt="Photorealistic Earth from space"
-          loading="lazy" decoding="async">
+          src="assets/hero-a-brand.webp"
+          width="360"
+          height="360"
+          alt="Planet Earth with city lights"
+        />
+      </figure>
+    </section>
+    <section id="services" class="services">
+      <h2 class="section-title">Services</h2>
+      <p class="sub">
+        From quick wins to full strategy and execution. Choose what moves the
+        needle now.
+      </p>
+      <div class="grid grid-3">
+        <article class="card">
+          <span class="badge">SEO</span>
+          <h3>SEO Audits & Strategy</h3>
+          <p>
+            Technical health, IA, and content architecture. A pragmatic 90-day
+            roadmap.
+          </p>
+          <ul>
+            <li>Technical audit & content gap</li>
+            <li>Keyword plan & site architecture</li>
+            <li>Implementation notes for dev/editorial</li>
+          </ul>
+        </article>
+        <article class="card">
+          <span class="badge">Growth</span>
+          <h3>Content & Growth</h3>
+          <p>
+            Landing pages, editorial ops, conversion copy, lifecycle content.
+          </p>
+        </article>
+        <article class="card">
+          <span class="badge">AI</span>
+          <h3>AI Consulting & Enablement</h3>
+          <p>
+            Use-cases, prompt-ops, QA, team training, policy & safety
+            (EN/PL/NL).
+          </p>
+        </article>
+        <article class="card">
+          <span class="badge">Advisory</span>
+          <h3>Consulting</h3>
+          <p>Sparring for leaders, SEO/AI mentoring, strategic support.</p>
+        </article>
+        <article class="card">
+          <span class="badge">UX</span>
+          <h3>Content & UX Audits</h3>
+          <p>Narrative clarity, information design, conversion uplift.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Analytics</span>
+          <h3>Analytics & ROI</h3>
+          <p>
+            GA4/GSC setup, KPIs, dashboards, attribution — what truly matters.
+          </p>
+        </article>
+      </div>
+    </section>
+    <section id="process" class="process">
+      <h2 class="section-title">How we work</h2>
+      <p class="sub">
+        Clear, agile, and measurable — so you see progress fast.
+      </p>
+      <div class="grid grid-2">
+        <div class="step">
+          1. Discover — goals, data, quick audit (7–10 days).
+        </div>
+        <div class="step">2. Plan — priorities and a 90-day roadmap.</div>
+        <div class="step">
+          3. Build — implementation, content, SEO, and A/B testing.
+        </div>
+        <div class="step">4. Measure — KPIs, reporting, next iterations.</div>
+      </div>
+    </section>
+    <section id="cases">
+      <h2 class="section-title">Case studies</h2>
+      <p class="sub">
+        Selected outcomes (names available under NDA). Worldwide delivery.
+      </p>
+      <div class="grid grid-3">
+        <article class="card cs-card">
+          <h3>B2C Platform</h3>
+          <p>
+            +118% organic YoY and 60% faster indexation across the portfolio.
+          </p>
+        </article>
+        <article class="card cs-card">
+          <h3>FinTech</h3>
+          <p>
+            +42% demo sign-ups from SEO in 90 days, measurable pipeline growth.
+          </p>
+        </article>
+        <article class="card cs-card">
+          <h3>B2B SaaS</h3>
+          <p>–27% cost per lead via AI-ops and content systemization.</p>
+        </article>
+      </div>
+    </section>
+    <section id="roi" class="roi-shell">
+      <div class="roi-grid">
+        <article class="roi-card">
+          <p
+            class="roi-eyebrow"
+            style="
+              letter-spacing: 0.05em;
+              font-size: 0.68rem;
+              margin-bottom: 4px;
+            "
+          >
+            READY TO MEASURE &amp; TALK?
+          </p>
+          <h2 class="roi-title">Estimate your ROI</h2>
+          <p class="roi-sub">
+            Directional — to decide if now is the right moment.
+          </p>
+          <label class="roi-label" for="roi-traffic"
+            >Monthly target traffic</label
+          >
+          <input
+            id="roi-traffic"
+            type="number"
+            min="0"
+            step="50"
+            value="1000"
+            class="roi-input"
+          />
+          <div class="roi-inline">
+            <div class="roi-col">
+              <label class="roi-label" for="roi-cr">Conversion rate (%)</label>
+              <input
+                id="roi-cr"
+                type="number"
+                step="0.1"
+                value="1.5"
+                class="roi-input"
+              />
+            </div>
+            <div class="roi-col">
+              <label class="roi-label" for="roi-ltv"
+                >Avg. order/lead value</label
+              >
+              <div class="roi-ccy-wrap">
+                <select id="roi-ccy" class="roi-ccy">
+                  <option value="EUR" selected="selected">EUR</option>
+                  <option value="USD">USD</option>
+                  <option value="PLN">PLN</option>
+                </select>
+                <input
+                  id="roi-ltv"
+                  type="number"
+                  step="10"
+                  value="800"
+                  class="roi-input"
+                />
+              </div>
+            </div>
+          </div>
+          <label class="roi-label" for="roi-inv">Monthly investment</label>
+          <input
+            id="roi-inv"
+            type="number"
+            min="0"
+            step="50"
+            value="3000"
+            class="roi-input"
+          />
+          <button id="roi-btn" class="roi-btn">Calculate</button>
+        </article>
+        <article class="roi-contact">
+          <h2 class="roi-title">Contact</h2>
+          <p class="roi-sub">
+            Tell us what you're building — we'll help you make it visible.
+          </p>
+          <label class="roi-label" for="c-name">Name</label>
+          <input id="c-name" class="roi-input" placeholder="Your name" />
+          <label class="roi-label" for="c-mail">Email</label>
+          <input
+            id="c-mail"
+            class="roi-input"
+            type="email"
+            placeholder="you@company.com"
+          />
+          <label class="roi-label" for="c-msg">Message</label>
+          <textarea
+            id="c-msg"
+            class="roi-input"
+            rows="3"
+            placeholder="Describe the project..."
+          ></textarea>
+          <button class="roi-btn">Send</button>
+          <p class="roi-note">We usually reply within 1–2 business days.</p>
+          <p class="roi-note">
+            Working across EU, UK, US &amp; global teams. SEO • AI • Strategy •
+            Automation.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer><p>© 2025 A-Brand Marketing. All rights reserved.</p></footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var e = document.getElementById("roi-traffic"),
+        t = document.getElementById("roi-cr"),
+        n = document.getElementById("roi-ltv"),
+        o = document.getElementById("roi-inv"),
+        r = document.getElementById("roi-ccy"),
+        d = document.getElementById("roi-btn"),
+        a = document.getElementById("roi-out"),
+        i = document.getElementById("roi-note");
+      function c(e, t) {
+        if (!e) return t;
+        var n = (e.value || "").replace(/[^0-9.,-]/g, "").replace(",", "."),
+          o = parseFloat(n);
+        return isNaN(o) ? t : o;
+      }
+      function u() {
+        var d = c(e, 0),
+          u = c(t, 1.5),
+          l = c(n, 800),
+          m = c(o, 0),
+          E = r ? r.value : "EUR";
+        (d <= 0 && (d = 800),
+          d > 3e4 && (d = 3e4),
+          l <= 0 && (l = 800),
+          l > 5e3 && (l = 5e3),
+          u < 0 && (u = 0),
+          u > 15 && (u = 15));
+        var v = m;
+        m > 0 && m < 250 && (v = 250);
+        var s = d * (u / 100),
+          f = s * l,
+          g = 0;
+        if (
+          (v > 0 &&
+            ((g = ((f - v) / v) * 100) < 0 && (g = 0),
+            g > 320 && ((g = 320), (f = 4.2 * v))),
+          a &&
+            (a.textContent =
+              "Est. monthly value: " +
+              Math.round(f).toLocaleString("en-US") +
+              " " +
+              E +
+              " • Est. ROI: " +
+              g.toFixed(1) +
+              "% • Est. leads: " +
+              Math.round(s)),
+          i)
+        ) {
+          var y = v > 0 && s > 0 ? (v / s).toFixed(2) + " " + E : "–";
+          i.textContent =
+            "Live calc: user traffic wins, budget fills gaps, ROI capped at 320%. Est. cost per lead: " +
+            y +
+            ".";
+        }
+      }
+      ([e, t, n, o, r].forEach(function (e) {
+        e && e.addEventListener("input", u);
+      }),
+        d &&
+          d.addEventListener("click", function (e) {
+            (e.preventDefault(), u());
+          }),
+        u());
+    });
+  </script>
+  <style id="cta-hover-lite">
+    .cta {
+      background: linear-gradient(135deg, var(--brand1), var(--brand2));
+      background-size: 180% 180%;
+      transition:
+        background-position 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+    .cta:focus-visible,
+    .cta:hover {
+      background-position: 100% 0;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }</style
+  ><style id="a-brand-tablet-fix">
+    @media (min-width: 700px) and (max-width: 1180px) {
+      header.site nav#topnav {
+        gap: 18px;
+      }
+      .hero h1 {
+        font-size: 42px;
+        line-height: 1.2;
+      }
+      .hero p {
+        max-width: 80%;
+        font-size: 1.05rem;
+      }
+      .hero .btn-row {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+      }
+      section {
+        padding: 60px 28px;
+      }
+      #roi .roi-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      #roi .roi-card,
+      #roi .roi-contact {
+        padding: 24px 22px;
+        border-radius: 22px;
+      }
+      footer {
+        padding-bottom: 80px;
+        font-size: 0.8rem;
+      }
+    }</style
+  ><style id="a-brand-tablet-moon">
+    @media (orientation: portrait) and (min-width: 700px) and (max-width: 1180px) {
+      body {
+        background:
+          radial-gradient(
+            600px 400px at 50% -10%,
+            rgba(87, 189, 232, 0.12) 0,
+            rgba(5, 7, 13, 0) 70%
+          ),
+          radial-gradient(
+            820px 520px at 8% 110%,
+            rgba(110, 231, 183, 0.07) 0,
+            rgba(5, 7, 13, 0) 78%
+          ),
+          #05070d;
+      }
+    }</style
+  ><style id="a-brand-mobile-hover">
+    @media (hover: hover) and (max-width: 820px) {
+      .cta,
+      .roi-btn,
+      a.button,
+      button {
+        transition:
+          background 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+      .cta:hover,
+      .roi-btn:hover,
+      a.button:hover,
+      button:hover {
+        background: linear-gradient(
+          90deg,
+          rgba(56, 189, 248, 0.25),
+          rgba(110, 231, 183, 0.25)
+        );
+        box-shadow: 0 0 14px rgba(110, 231, 183, 0.25);
+      }
+    }
+    @media (hover: none) and (max-width: 820px) {
+      .cta:active,
+      .roi-btn:active,
+      a.button:active,
+      button:active {
+        background: linear-gradient(
+          90deg,
+          rgba(56, 189, 248, 0.35),
+          rgba(110, 231, 183, 0.35)
+        );
+        box-shadow: 0 0 18px rgba(110, 231, 183, 0.35);
+        transform: scale(0.98);
+      }
+    }</style
+  ><style id="a-brand-touchglow">
+    .touch-glow {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.28);
+      border: 1px solid rgba(110, 231, 183, 0.14);
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document
+        .querySelectorAll(
+          ".card, .process .step, #roi .roi-card, #roi .roi-contact, .cta, .roi-btn, button",
+        )
+        .forEach(function (t) {
+          function e() {
+            t.classList.remove("touch-glow");
+          }
+          (t.addEventListener(
+            "touchstart",
+            function () {
+              t.classList.add("touch-glow");
+            },
+            { passive: !0 },
+          ),
+            t.addEventListener("touchend", e, { passive: !0 }),
+            t.addEventListener("touchcancel", e, { passive: !0 }));
+        });
+    });
+  </script>
+  <style id="a-brand-touchglow">
+    .touch-glow {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.28);
+      border: 1px solid rgba(110, 231, 183, 0.14);
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document
+        .querySelectorAll(
+          ".card, .process .step, #roi .roi-card, #roi .roi-contact, .cta, .roi-btn, button",
+        )
+        .forEach(function (t) {
+          function e() {
+            t.classList.remove("touch-glow");
+          }
+          (t.addEventListener(
+            "touchstart",
+            function () {
+              t.classList.add("touch-glow");
+            },
+            { passive: !0 },
+          ),
+            t.addEventListener("touchend", e, { passive: !0 }),
+            t.addEventListener("touchcancel", e, { passive: !0 }));
+        });
+    });
+  </script>
+  <style id="a-brand-soft-touch">
+    .touch-soft-glow {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 26px rgba(56, 189, 248, 0.14);
+      border: 1px solid rgba(110, 231, 183, 0.14);
+      transition:
+        transform 0.14s ease-out,
+        box-shadow 0.14s ease-out;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document
+        .querySelectorAll(".cta, #roi .roi-card, #roi .roi-contact")
+        .forEach(function (t) {
+          t.addEventListener(
+            "touchstart",
+            function () {
+              (t.classList.add("touch-soft-glow"),
+                setTimeout(function () {
+                  t.classList.remove("touch-soft-glow");
+                }, 350));
+            },
+            { passive: !0 },
+          );
+        });
+    });
+  </script>
+</html>

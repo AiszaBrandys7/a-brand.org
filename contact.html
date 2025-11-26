@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Contact — a-brand.org</title>
+  <meta name="description" content="Contact A-Brand Marketing for SEO, AI, and growth advisory.">
+  <link rel="canonical" href="https://a-brand.org/contact.html">
+  <meta name="theme-color" content="#05070d">
+  <link rel="icon" href="assets/favicon-a.svg" type="image/svg+xml">
+
+  <!-- OG -->
+  <meta property="og:title" content="Contact — a-brand.org">
+  <meta property="og:description" content="Let's build visibility together.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://a-brand.org/contact.html">
+  <meta property="og:image" content="https://a-brand.org/assets/og-image.png">
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NNT653NP');
+  </script>
+
+  <style>
+    :root{
+      --bg:#05070d;
+      --fg:#f3f6ff;
+      --muted:#b7c0d9;
+      --card:#0f1422;
+      --border:#1d2233;
+      --brand:#6ea8ff;
+      --brand2:#6ee7b7;
+      --shadow:0 10px 40px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      color:var(--fg);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Arial,"Helvetica Neue",sans-serif;
+      background:
+        radial-gradient(1200px 800px at 70% -10%, rgba(255,190,120,.06) 0%, rgba(255,140,80,.02) 35%, transparent 60%),
+        radial-gradient(900px 600px at 10% 110%, rgba(110,231,183,.04) 0%, rgba(110,231,183,0) 55%),
+        var(--bg);
+      background-attachment:fixed;
+      line-height:1.6;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1120px;margin:0 auto;padding:0 20px}
+
+    /* header */
+    header.site{
+      position:sticky;top:0;z-index:40;
+      background:rgba(5,7,13,.55);
+      backdrop-filter:saturate(140%) blur(8px);
+      border-bottom:1px solid var(--border);
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      min-height:64px;
+      flex-wrap:nowrap;
+    }
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;text-transform:lowercase}
+    .logo-mark{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--brand),var(--brand2));box-shadow:var(--shadow)}
+    #topnav{display:flex;gap:14px;align-items:center}
+    #topnav a{font-weight:600;white-space:nowrap}
+    #topnav a.active{border-bottom:2px solid var(--brand);}
+
+    /* tu łamiemy na mobile */
+    @media (max-width:720px){
+      .nav{
+        flex-wrap:wrap;
+        padding:10px 0 12px;
+      }
+      #topnav{
+        width:100%;
+        gap:12px;
+        flex-wrap:wrap;
+      }
+    }
+
+    main{
+      padding:72px 0 70px;
+    }
+    .contact-shell{
+      max-width:720px;
+      margin:0 auto;
+    }
+    h1{font-size:clamp(30px,4.4vw,46px);margin-bottom:6px}
+    p.sub{color:var(--muted);margin-bottom:18px}
+
+    form.contact{
+      background:rgba(15,20,34,.55);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:20px;
+      display:grid;
+      gap:12px;
+    }
+    label{font-weight:600}
+    input,textarea{
+      width:100%;
+      padding:12px 14px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:var(--bg);
+      color:var(--fg);
+    }
+    input:focus,textarea:focus,button:focus{outline:3px solid rgba(110,231,183,.35)}
+    .cta{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:10px 16px;
+      border-radius:12px;
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      color:#081019;
+      font-weight:800;
+      border:none;
+      cursor:pointer;
+    }
+    .form-note{color:var(--muted);font-size:13px;margin-top:2px;}
+
+    .meta-bottom{
+      color:var(--muted);
+      font-size:14px;
+      margin:20px 2px 0;
+    }
+
+    footer{
+      padding:44px 0 48px;
+      border-top:1px solid var(--border);
+      color:var(--muted);
+      text-align:center;
+    }
+    footer p{margin:4px 0}
+
+    /* cookie */
+    #cookie-banner{
+      position:fixed;bottom:14px;left:50%;transform:translateX(-50%);
+      background:rgba(5,7,13,.9);border:1px solid rgba(243,246,255,.12);
+      border-radius:14px;padding:14px 18px;display:none;
+      gap:14px;align-items:center;max-width:560px;z-index:999;backdrop-filter:blur(8px);font-size:14px;
+    }
+    #cookie-banner button{border:none;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#081019;padding:8px 14px;border-radius:10px;font-weight:600;cursor:pointer;}
+  </style>
+<style id="roi-align">
+#roi.roi-shell{display:flex;gap:28px;align-items:flex-start;}
+#roi .roi-left{flex:1 1 58%;min-width:360px;}
+#roi .roi-right{flex:1 1 42%;max-width:420px;}
+#roi .roi-out{margin-top:14px;}
+@media (max-width:900px){
+  #roi.roi-shell{flex-direction:column;}
+  #roi .roi-left,#roi .roi-right{width:100%;min-width:0;max-width:none;}
+}
+</style>
+</head>
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NNT653NP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <header class="site">
+    <div class="container nav">
+      <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true"></span><span>a-brand.org</span></a>
+      <nav id="topnav">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#process">Process</a>
+        <a href="index.html#cases">Case studies</a>
+        <a href="index.html#roi">ROI</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="contact-shell">
+      <h1>Contact</h1>
+      <p class="sub">Tell us what you’re building — we’ll help you make it visible.</p>
+
+      <form class="contact" name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact">
+        <label for="name">Name</label>
+        <input id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="msg">Message</label>
+        <textarea id="msg" name="message" rows="6" required></textarea>
+
+        <button class="cta" type="submit">Send</button>
+        <p class="form-note">We usually reply within 1–2 business days.</p>
+      </form>
+
+      <p class="meta-bottom">Working across EU, UK, US & global teams. SEO • AI • Strategy • Automation.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p class="muted">© 2025 A-Brand. All rights reserved.</p>
+    <p><a href="privacy.html">Privacy Policy</a> | <a href="tos.html">Terms of Use</a></p>
+    <p>
+      <a href="https://www.linkedin.com/company/abrandorg/" target="_blank" rel="noreferrer">LinkedIn</a> |
+      <a href="https://x.com/abrandorg" target="_blank" rel="noreferrer">X</a> |
+      <a href="https://www.instagram.com/abrandorg/" target="_blank" rel="noreferrer">Instagram</a>
+    </p>
+  </footer>
+
+  <!-- cookie -->
+  <div id="cookie-banner" role="region" aria-label="Cookie notice">
+    <span>We use cookies for analytics and a better experience. By continuing, you accept it.</span>
+    <button id="cookie-accept" type="button">OK</button>
+  </div>
+
+  <script>
+    const banner = document.getElementById('cookie-banner');
+    const btn = document.getElementById('cookie-accept');
+    if (!localStorage.getItem('abrand_cookie_ok')) {
+      banner.style.display = 'flex';
+    }
+    btn?.addEventListener('click', () => {
+      localStorage.setItem('abrand_cookie_ok', '1');
+      banner.style.display = 'none';
+    });
+  </script>
+<script id="roi-safe">
+document.addEventListener('DOMContentLoaded', function(){
+  function norm(v){
+    if (v == null) return 0;
+    // zamień przecinek na kropkę i wywal spacje
+    v = String(v).replace(/\s/g,'').replace(',', '.');
+    // zostaw cyfry i kropki
+    v = v.replace(/[^0-9.\-]/g,'');
+    const n = parseFloat(v);
+    return isNaN(n) ? 0 : n;
+  }
+
+  const wrap = document.querySelector('#roi, .roi-shell');
+  if (!wrap) return;
+
+  const trafficEl = wrap.querySelector('[name="roi-traffic"], [data-roi="traffic"], input[placeholder="Monthly target traffic"]') || wrap.querySelector('input[type="range"]');
+  const crEl      = wrap.querySelector('[name="roi-cr"], [data-roi="cr"]');
+  const ltvEl     = wrap.querySelector('[name="roi-ltv"], [data-roi="ltv"]');
+  const ccyEl     = wrap.querySelector('[name="roi-ccy"], [data-roi="ccy"], select');
+  const costEl    = wrap.querySelector('[name="roi-cost"], [data-roi="cost"]') || wrap.querySelector('input[placeholder="Monthly investment"]');
+  const outEl     = wrap.querySelector('.roi-out, .roi-result-line, .roi-output');
+
+  function calc(){
+    const traffic = norm(trafficEl && trafficEl.value);
+    const cr      = norm(crEl && crEl.value) / 100; // %
+    const ltv     = norm(ltvEl && ltvEl.value) || 800; // default 800
+    const invRaw  = norm(costEl && costEl.value);
+    const ccy     = ccyEl && ccyEl.value ? ccyEl.value : 'EUR';
+
+    // min inwestycji
+    const inv = invRaw > 0 && invRaw < 250 ? 250 : invRaw;
+
+    // leady z ruchu
+    const leads = traffic * cr;
+    const revenue = leads * ltv;
+
+    // ROI
+    let roi = 0;
+    if (inv > 0) {
+      roi = ((revenue - inv) / inv) * 100;
+    }
+    if (roi < 0) roi = 0;
+    if (roi > 320) roi = 320;
+
+    // CPL
+    let cpl = null;
+    if (leads > 0) cpl = inv / leads;
+
+    if (outEl) {
+      outEl.innerHTML =
+        'Est. monthly value: ' + revenue.toLocaleString('en-US', {maximumFractionDigits: 0}) + ' ' + ccy +
+        ' • Est. ROI: ' + roi.toFixed(1) + '% • Est. leads: ' + Math.round(leads) +
+        '<div class="small muted">Live calc: user traffic wins, budget fills gaps, ROI capped at 320%.</div>' +
+        (cpl !== null ? '<div class="small">Est. cost per lead: ' + cpl.toFixed(2) + ' ' + ccy + '</div>' : '');
+    }
+  }
+
+  // nasłuchy
+  [trafficEl, crEl, ltvEl, ccyEl, costEl].forEach(function(el){
+    if (el) el.addEventListener('input', calc);
+  });
+  const btn = wrap.querySelector('button, #calc, #roi-btn, #calc-roi');
+  if (btn) btn.addEventListener('click', function(e){ e.preventDefault(); calc(); });
+
+  calc();
+});
+</script>
+</body>
+</html>

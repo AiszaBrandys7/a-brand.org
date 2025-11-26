@@ -1,0 +1,65 @@
+=== HARD TEST: ROI CALCULATOR ===
+
+A) cost = 0 (powinno być ROI = 0)
+  cost:           0 €
+  traffic(final): 4000
+  revenue:        12000 €
+  ROI:            0.0% 
+  CPL:            -
+
+B) cost = 1 EUR
+  cost:           1 €
+  traffic(final): 1202
+  revenue:        3607 €
+  ROI:            320.0% (CAP hit)
+  CPL:            0.06 €
+
+C) cost = 10 EUR
+  cost:           10 €
+  traffic(final): 1224
+  revenue:        3672 €
+  ROI:            320.0% (CAP hit)
+  CPL:            0.54 €
+
+D) cost = 100 EUR
+  cost:           100 €
+  traffic(final): 1440
+  revenue:        4320 €
+  ROI:            320.0% (CAP hit)
+  CPL:            4.63 €
+
+E) cost = 800 EUR (uwaga taty)
+  cost:           800 €
+  traffic(final): 3120
+  revenue:        9360 €
+  ROI:            320.0% (CAP hit)
+  CPL:            17.09 €
+
+F) cost = 3000 EUR (Twój case)
+  cost:           3000 €
+  traffic(final): 8400
+  revenue:        25200 €
+  ROI:            320.0% (CAP hit)
+  CPL:            23.81 €
+
+G) cost = 10000 EUR
+  cost:           10000 €
+  traffic(final): 18000
+  revenue:        54000 €
+  ROI:            320.0% (CAP hit)
+  CPL:            37.04 €
+
+=== SEO / HTML DIAG ===
+title:        OK
+description:   OK
+h1:            OK
+canonical:     BRAK
+og:image:      BRAK
+og:title:      BRAK
+og:description:BRAK
+favicon:       OK
+images without alt: 0 ✅
+
+=== FILES ===
+sitemap.xml: OK
+robots.txt:  OK

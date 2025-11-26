@@ -1,0 +1,58 @@
+
+/* --- ROI + Contact layout --- */
+#roi-contact {
+  padding: 60px 20px;
+  background: #0A0F1F;
+  color: #fff;
+}
+.roi-contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.roi-box, .contact-box {
+  flex: 1;
+  min-width: 320px;
+  background: #111827;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+.roi-box h2, .contact-box h2 { margin-bottom: 16px; color: #00BFFF; }
+.roi-box label, .contact-box label {
+  display: block; margin-top: 12px; font-size: 14px; color: #ccc;
+}
+.roi-box input, .roi-box select,
+.contact-box input, .contact-box textarea {
+  width: 100%; margin-top: 6px; padding: 10px;
+  border: 1px solid #333; border-radius: 6px;
+  background: #1a2234; color: #fff;
+}
+.cta {
+  margin-top: 16px; padding: 10px 18px; border: none;
+  border-radius: 6px;
+  background: linear-gradient(90deg,#00BFFF,#00A2FF);
+  color: #fff; font-weight: bold; cursor: pointer;
+  transition: opacity 0.25s;
+}
+.cta:hover { opacity: 0.85; }
+
+/* Footer */
+footer {
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid #333;
+  background: #0A0F1F;
+  color: #aaa;
+}
+footer a { color: #aaa; margin: 0 8px; transition: color 0.25s; }
+footer a:hover { color: #00BFFF; }
+footer .muted { margin-top: 8px; font-size: 13px; color: #666; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .roi-contact-container { flex-direction: column; }
+}
