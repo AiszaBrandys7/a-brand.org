@@ -17,122 +17,108 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://a-brand.org/" />
   <meta property="og:image" content="https://a-brand.org/assets/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Favicon -->
   <link rel="icon" href="/assets/favicon-a.svg" type="image/svg+xml">
-  <link rel="alternate icon" href="/assets/favicon-a.png">
 
-  <!-- Google Analytics 4 -->
+  <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VRPBHJ05ZL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-VRPBHJ05ZL', {
-      anonymize_ip: true
-    });
+    gtag('config', 'G-VRPBHJ05ZL', { anonymize_ip: true });
   </script>
 
   <style>
-    :root {
+    :root{
       --bg:#05070d;
       --fg:#f3f6ff;
-      --muted:rgba(243,246,255,.65);
-      --card:rgba(9,14,22,.6);
+      --muted:#b7c0d9;
+      --card:#0f1422;
+      --border:#1d2233;
       --brand1:#6ee7b7;
       --brand2:#6ea8ff;
-      --radius:18px;
     }
 
     *{box-sizing:border-box}
 
     body{
       margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;
-      background:
-        radial-gradient(900px 700px at 70% -10%, rgba(110,231,183,.12), transparent 70%),
-        radial-gradient(800px 600px at 10% 110%, rgba(110,168,255,.10), transparent 70%),
-        var(--bg);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;
+      background:var(--bg);
       color:var(--fg);
       line-height:1.55;
     }
 
-    a{color:inherit;text-decoration:none}
-    .container{max-width:1120px;margin:0 auto;padding:0 20px}
+    a{text-decoration:none;color:inherit}
 
-    /* HEADER */
+    /* ===== HEADER ===== */
     header{
       position:sticky;
       top:0;
-      z-index:20;
+      z-index:50;
+      background:rgba(5,7,13,.85);
       backdrop-filter:blur(16px);
-      background:rgba(5,7,13,.6);
-      border-bottom:1px solid rgba(255,255,255,.05)
+      border-bottom:1px solid var(--border);
     }
 
     nav{
+      max-width:1120px;
+      margin:0 auto;
+      padding:12px 20px;
       display:flex;
-      justify-content:space-between;
       align-items:center;
-      height:64px
+      justify-content:space-between;
+      gap:16px;
     }
 
-    nav a{
-      margin-left:18px;
+    .brand{
+      font-weight:800;
+      white-space:nowrap;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    .nav-links a{
       font-size:.9rem;
-      position:relative;
       opacity:.85;
+      transition:opacity .2s ease;
     }
 
-    nav a:hover{opacity:1}
-
-    nav a:not(.cta)::after{
-      content:"";
-      position:absolute;
-      left:0;
-      bottom:-6px;
-      width:0;
-      height:2px;
-      background:linear-gradient(90deg,var(--brand1),var(--brand2));
-      transition:width .25s ease;
-    }
-
-    nav a:not(.cta):hover::after{width:100%}
+    .nav-links a:hover{opacity:1}
 
     .cta{
       padding:10px 18px;
       border-radius:999px;
       background:linear-gradient(135deg,var(--brand1),var(--brand2));
-      color:#041017;
-      font-weight:600;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      background-size:180% 180%;
-      transition:background-position .25s ease, transform .25s ease, box-shadow .25s ease;
+      color:#081019;
+      font-weight:700;
+      white-space:nowrap;
+      transition:transform .2s ease, box-shadow .2s ease;
     }
 
     .cta:hover{
-      background-position:100% 0;
       transform:translateY(-1px);
-      box-shadow:0 8px 20px rgba(0,0,0,.25);
+      box-shadow:0 8px 24px rgba(0,0,0,.35);
     }
 
-    .cta.secondary{
-      background:none;
-      border:1px solid rgba(255,255,255,.2);
-      color:var(--fg);
+    /* MOBILE HEADER */
+    @media(max-width:640px){
+      nav{flex-direction:column;align-items:flex-start}
+      .nav-links{width:100%;justify-content:space-between}
     }
 
-    section{padding:72px 0}
+    /* ===== LAYOUT ===== */
+    main{max-width:1120px;margin:0 auto;padding:72px 20px}
+    section{margin-bottom:72px}
 
     h1{
-      font-size:clamp(36px,4.5vw,58px);
+      font-size:clamp(34px,6vw,56px);
       line-height:1.05;
       margin:0 0 20px;
     }
@@ -141,36 +127,35 @@
     p.sub{color:var(--muted);max-width:720px}
 
     .grid{display:grid;gap:24px}
-    .grid-2{grid-template-columns:repeat(2,1fr)}
     .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
 
     @media(max-width:900px){
       .grid-2,.grid-3{grid-template-columns:1fr}
-      section{padding:56px 0}
     }
 
     .card{
       background:var(--card);
-      border-radius:var(--radius);
-      padding:22px;
-      border:1px solid rgba(255,255,255,.04);
-      backdrop-filter:blur(10px);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:24px;
+      transition:transform .2s ease, box-shadow .2s ease;
     }
 
-    .badge{
-      display:inline-block;
-      font-size:.7rem;
-      padding:6px 12px;
-      border-radius:999px;
-      background:rgba(255,255,255,.06);
-      margin-bottom:12px;
-      color:var(--muted)
+    .card:hover{
+      transform:translateY(-2px);
+      box-shadow:0 10px 40px rgba(0,0,0,.35);
     }
 
-    /* HERO PLANET */
+    /* ===== HERO ===== */
     .hero-wrap{
       position:relative;
-      overflow:visible; /* ⬅️ KLUCZOWA POPRAWKA */
+      animation:fadeUp .6s ease both;
+    }
+
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(12px)}
+      to{opacity:1;transform:none}
     }
 
     .hero-wrap::after{
@@ -184,32 +169,36 @@
       background:url("assets/hero-a-brand.webp") no-repeat center/contain;
       opacity:.28;
       pointer-events:none;
-      filter:saturate(1.05) contrast(1.05);
     }
 
     @media(max-width:900px){
       .hero-wrap::after{display:none}
     }
 
-    /* ROI */
+    /* ===== FORM ===== */
     input,textarea{
       width:100%;
       padding:10px 12px;
       border-radius:12px;
-      border:1px solid rgba(255,255,255,.08);
-      background:rgba(5,9,15,.5);
+      border:1px solid var(--border);
+      background:#05070d;
       color:var(--fg);
+      transition:border .2s ease, box-shadow .2s ease;
+    }
+
+    input:focus,textarea:focus{
+      outline:none;
+      border-color:var(--brand2);
+      box-shadow:0 0 0 2px rgba(110,168,255,.15);
     }
 
     label{font-size:.75rem;color:var(--muted)}
-    .roi-out{margin-top:12px;font-size:.85rem}
-    .roi-note{font-size:.7rem;color:var(--muted)}
 
     footer{
       text-align:center;
-      padding:40px 0;
-      color:rgba(255,255,255,.4);
-      border-top:1px solid rgba(255,255,255,.05)
+      padding:40px 20px;
+      color:var(--muted);
+      border-top:1px solid var(--border);
     }
   </style>
 </head>
@@ -217,36 +206,31 @@
 <body>
 
 <header>
-  <div class="container">
-    <nav>
-      <strong>a-brand.org</strong>
-      <div>
-        <a href="#what">What we do</a>
-        <a href="#roi">ROI</a>
-        <a href="#contact" class="cta">Start a conversation</a>
-      </div>
-    </nav>
-  </div>
+  <nav>
+    <div class="brand">a-brand.org</div>
+    <div class="nav-links">
+      <a href="#what">What we do</a>
+      <a href="#roi">ROI</a>
+      <a href="#contact" class="cta">Start a conversation</a>
+    </div>
+  </nav>
 </header>
 
-<main class="container">
+<main>
 
-  <!-- HERO -->
   <section class="hero-wrap">
-    <span class="badge">AI • Content • Strategy</span>
-    <h1>AI, Content & Strategy<br/>That Actually Drive Results</h1>
+    <h1>AI, Content & Strategy<br>That Actually Drive Results</h1>
     <p class="sub">
       Clear thinking. Measurable outcomes. No empty buzzwords.
-      We help companies turn AI, content and data into practical systems that
-      improve visibility, efficiency and revenue.
+      We help companies turn AI, content and data into practical systems
+      that improve visibility, efficiency and revenue.
     </p>
-    <div style="margin-top:24px">
+    <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap">
       <a href="#roi" class="cta">Calculate your AI ROI</a>
-      <a href="#contact" class="cta secondary">Start a conversation</a>
+      <a href="#contact" class="cta" style="background:none;border:1px solid var(--border);color:var(--fg)">Start a conversation</a>
     </div>
   </section>
 
-  <!-- WHAT -->
   <section id="what">
     <h2>What We Do</h2>
     <p class="sub">Modular services that scale from quick wins to long-term partnerships.</p>
@@ -267,87 +251,53 @@
     </div>
   </section>
 
-  <!-- ROI -->
   <section id="roi">
     <h2>AI ROI Calculator</h2>
-    <p class="sub">
-      Directional estimate based on realistic assumptions.
-      <strong>200–400% ROI</strong> is possible — context matters.
-    </p>
-
     <div class="grid grid-2">
       <div class="card">
         <label>Monthly traffic</label>
         <input id="traffic" type="number" value="5000">
-
         <label>Conversion rate (%)</label>
         <input id="cr" type="number" value="1.5">
-
-        <label>Avg. lead / order value</label>
+        <label>Avg. lead value</label>
         <input id="value" type="number" value="800">
-
         <label>Monthly investment</label>
         <input id="cost" type="number" value="3000">
-
         <button class="cta" style="margin-top:14px" onclick="calcROI()">Calculate</button>
       </div>
-
       <div class="card">
-        <div id="roiResult" class="roi-out">Adjust inputs to estimate impact.</div>
-        <p class="roi-note">
-          This is a planning estimate, not a guarantee.
-        </p>
+        <div id="roiResult">Adjust inputs to estimate impact.</div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact">
     <h2>Let’s Talk</h2>
-    <p class="sub">Tell us about your context — we’ll respond with clarity.</p>
-
-    <form name="contact" method="POST" data-netlify="true" class="card">
+    <form name="contact" method="POST" action="/thank-you.html" data-netlify="true" class="card">
       <input type="hidden" name="form-name" value="contact">
-
       <label>Name</label>
       <input name="name" required>
-
       <label>Email</label>
       <input name="email" type="email" required>
-
       <label>Message</label>
       <textarea name="message" rows="4"></textarea>
-
       <button class="cta" style="margin-top:14px">Send message</button>
     </form>
   </section>
 
 </main>
 
-<footer>
-  © 2025 A-Brand. All rights reserved.
-</footer>
+<footer>© 2025 A-Brand. All rights reserved.</footer>
 
 <script>
 function calcROI(){
-  const t = +traffic.value || 0;
-  const crv = (+cr.value || 0)/100;
-  const v = +value.value || 0;
-  const c = +cost.value || 0;
-
-  const leads = t * crv;
-  const revenue = leads * v;
-
-  if(c <= 0){
-    roiResult.textContent = "Add a monthly investment to calculate ROI.";
-    return;
-  }
-
-  let roi = ((revenue - c) / c) * 100;
-  roi = Math.min(Math.max(roi,0),300);
-
+  const t=+traffic.value||0,
+        crv=(+cr.value||0)/100,
+        v=+value.value||0;
+  const leads=t*crv,
+        revenue=leads*v;
   roiResult.textContent =
-    `Estimated monthly value: ${Math.round(revenue).toLocaleString()} • Leads: ${Math.round(leads)} • ROI: ${roi.toFixed(1)}%`;
+    `Estimated monthly value: ${Math.round(revenue).toLocaleString()} • Leads: ${Math.round(leads)}`;
 }
 </script>
 
