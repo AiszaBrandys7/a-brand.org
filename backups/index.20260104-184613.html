@@ -3,29 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>A-Brand — AI, Content & Strategy That Drive Results</title>
 
   <meta name="description"
         content="Practical AI, content and SEO strategies focused on measurable growth, clarity and real business impact." />
 
-  <link rel="canonical" href="https://a-brand.org/" />
+  <link rel="canonical" href="https://a-brand.org" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="A-Brand — AI, Content & Strategy That Drive Results" />
-  <meta property="og:description" content="Clear thinking. Measurable outcomes. No empty buzzwords." />
+  <meta property="og:title" content="A-Brand — AI, Content & Strategy" />
+  <meta property="og:description"
+        content="Clear thinking. Measurable outcomes. No empty buzzwords." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://a-brand.org/" />
-  <meta property="og:image" content="https://a-brand.org/assets/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="/assets/favicon-a.svg" type="image/svg+xml">
-  <link rel="alternate icon" href="/assets/favicon-a.png">
 
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VRPBHJ05ZL"></script>
@@ -33,9 +21,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-VRPBHJ05ZL', {
-      anonymize_ip: true
-    });
+    gtag('config', 'G-VRPBHJ05ZL');
   </script>
 
   <style>
@@ -102,7 +88,9 @@
       transition:width .25s ease;
     }
 
-    nav a:not(.cta):hover::after{width:100%}
+    nav a:not(.cta):hover::after{
+      width:100%;
+    }
 
     .cta{
       padding:10px 18px;
@@ -170,13 +158,13 @@
     /* HERO PLANET */
     .hero-wrap{
       position:relative;
-      overflow:visible; /* ⬅️ KLUCZOWA POPRAWKA */
+      overflow:hidden;
     }
 
     .hero-wrap::after{
       content:"";
       position:absolute;
-      right:-18%;
+      right:-14%;
       top:50%;
       transform:translateY(-50%);
       width:520px;
