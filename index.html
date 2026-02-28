@@ -4,16 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>A-Brand — AI, Content & Strategy That Drive Results</title>
+  <title>a-brand.org — Clarity to rise. Power to build.</title>
 
   <meta name="description"
-        content="Practical AI, content and SEO strategies focused on measurable growth, clarity and real business impact." />
+        content="AI, content and SEO systems designed for measurable outcomes — built for execution, clarity and durable growth." />
 
   <link rel="canonical" href="https://a-brand.org/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="A-Brand — AI, Content & Strategy That Drive Results" />
-  <meta property="og:description" content="Clear thinking. Measurable outcomes. No empty buzzwords." />
+  <meta property="og:title" content="a-brand.org — Clarity to rise. Power to build." />
+  <meta property="og:description" content="AI, content and SEO systems designed for measurable outcomes — built for execution, clarity and durable growth." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://a-brand.org/" />
   <meta property="og:image" content="https://a-brand.org/assets/og-image.png" />
@@ -21,14 +21,7 @@
   <!-- Favicon -->
   <link rel="icon" href="/assets/favicon-a.svg" type="image/svg+xml">
 
-  <!-- GA4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VRPBHJ05ZL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-VRPBHJ05ZL', { anonymize_ip: true });
-  </script>
+  <meta name="theme-color" content="#05070d" />
 
   <style>
     :root{
@@ -42,6 +35,7 @@
     }
 
     *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
 
     body{
       margin:0;
@@ -76,6 +70,7 @@
     .brand{
       font-weight:800;
       white-space:nowrap;
+      letter-spacing:-0.01em;
     }
 
     .nav-links{
@@ -89,7 +84,6 @@
       font-size:.9rem;
       opacity:.85;
     }
-
     .nav-links a:hover{opacity:1}
 
     .cta{
@@ -99,12 +93,20 @@
       color:#081019;
       font-weight:700;
       white-space:nowrap;
+      border:0;
+      cursor:pointer;
       transition:transform .2s ease, box-shadow .2s ease;
     }
-
     .cta:hover{
       transform:translateY(-1px);
       box-shadow:0 8px 24px rgba(0,0,0,.35);
+    }
+
+    .cta.secondary{
+      background:none;
+      border:1px solid var(--border);
+      color:var(--fg);
+      font-weight:700;
     }
 
     @media(max-width:640px){
@@ -119,10 +121,11 @@
     h1{
       font-size:clamp(34px,6vw,56px);
       line-height:1.05;
-      margin:0 0 20px;
+      margin:0 0 18px;
+      letter-spacing:-0.02em;
     }
 
-    h2{margin:0 0 12px}
+    h2{margin:0 0 12px;letter-spacing:-0.01em}
     p.sub{color:var(--muted);max-width:720px}
 
     .grid{display:grid;gap:24px}
@@ -146,10 +149,16 @@
       box-shadow:0 10px 40px rgba(0,0,0,.35);
     }
 
+    .card h3{
+      margin:0 0 10px;
+      letter-spacing:-0.01em;
+    }
+
     /* HERO */
     .hero-wrap{
       position:relative;
       animation:fadeUp .6s ease both;
+      padding-top:6px;
     }
 
     @keyframes fadeUp{
@@ -166,7 +175,7 @@
       width:520px;
       height:520px;
       background:url("assets/hero-a-brand.webp") no-repeat center/contain;
-      opacity:.28;
+      opacity:.30;
       pointer-events:none;
     }
 
@@ -174,23 +183,269 @@
       .hero-wrap::after{display:none}
     }
 
-    /* FORM */
-    input,textarea{
+    .kicker{
+      display:inline-block;
+      font-size:.78rem;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      color:rgba(243,246,255,.72);
+      border:1px solid rgba(243,246,255,.08);
+      background:rgba(255,255,255,.03);
+      padding:6px 12px;
+      border-radius:999px;
+      margin-bottom:14px;
+    }
+
+    /* FORM + INPUTS */
+    input,textarea,select{
       width:100%;
       padding:10px 12px;
       border-radius:12px;
       border:1px solid var(--border);
       background:#05070d;
       color:var(--fg);
+      outline:none;
+    }
+    input:focus, textarea:focus, select:focus{
+      border-color:rgba(110,231,183,.35);
+      box-shadow:0 0 0 3px rgba(110,231,183,.08);
+    }
+    label{font-size:.75rem;color:var(--muted);display:block;margin-top:12px}
+
+    .note{
+      font-size:.85rem;
+      color:rgba(243,246,255,.72);
+      margin-top:14px;
     }
 
-    label{font-size:.75rem;color:var(--muted)}
+    .muted-small{
+      font-size:.85rem;
+      color:rgba(243,246,255,.62);
+      margin-top:10px;
+    }
+
+    /* ROI intro width bump */
+    .roi-intro{max-width:990px;}
+
+    .roi-result{
+      color:var(--muted);
+      line-height:1.55;
+    }
+    .roi-metrics{
+      margin-top:10px;
+      color:rgba(243,246,255,.88);
+      font-weight:650;
+      letter-spacing:-0.01em;
+    }
+    .roi-metrics .sep{opacity:.6;font-weight:500}
+    .roi-help{
+      margin-top:10px;
+      font-size:.85rem;
+      color:rgba(243,246,255,.64);
+    }
 
     footer{
       text-align:center;
       padding:40px 20px;
       color:var(--muted);
       border-top:1px solid var(--border);
+    }
+    footer a{opacity:.9}
+    footer a:hover{opacity:1}
+
+    /* =========================
+       COOKIE CONSENT (PRO)
+       ========================= */
+
+    .cookie-banner{
+      position:fixed;
+      left:16px;
+      right:16px;
+      bottom:16px;
+      z-index:9999;
+      display:none;
+    }
+
+    .cookie-card{
+      max-width:1120px;
+      margin:0 auto;
+      background:rgba(15,20,34,.92);
+      border:1px solid rgba(29,34,51,.9);
+      border-radius:18px;
+      backdrop-filter: blur(16px);
+      box-shadow:0 18px 60px rgba(0,0,0,.45);
+      padding:16px 16px;
+      display:flex;
+      gap:14px;
+      align-items:flex-start;
+      justify-content:space-between;
+    }
+
+    .cookie-text{
+      color:rgba(243,246,255,.82);
+      font-size:.92rem;
+      line-height:1.45;
+      max-width:760px;
+    }
+    .cookie-text a{
+      text-decoration:underline;
+      text-underline-offset: 3px;
+      opacity:.95;
+    }
+
+    .cookie-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      align-items:center;
+    }
+
+    .cookie-btn{
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid rgba(29,34,51,1);
+      background:transparent;
+      color:rgba(243,246,255,.92);
+      font-weight:700;
+      cursor:pointer;
+      transition:transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+      white-space:nowrap;
+    }
+    .cookie-btn:hover{transform:translateY(-1px);opacity:1}
+    .cookie-btn.primary{
+      border:0;
+      background:linear-gradient(135deg,var(--brand1),var(--brand2));
+      color:#081019;
+      box-shadow:0 10px 26px rgba(0,0,0,.28);
+    }
+
+    .cookie-btn.link{
+      border:0;
+      padding:10px 10px;
+      opacity:.85;
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+
+    @media (max-width: 740px){
+      .cookie-card{flex-direction:column;align-items:stretch}
+      .cookie-actions{justify-content:flex-start}
+    }
+
+    /* Modal */
+    .cookie-modal{
+      position:fixed;
+      inset:0;
+      z-index:10000;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:18px;
+      background:rgba(0,0,0,.55);
+      backdrop-filter: blur(6px);
+    }
+
+    .modal-card{
+      width:min(720px, 100%);
+      background:rgba(15,20,34,.96);
+      border:1px solid rgba(29,34,51,1);
+      border-radius:18px;
+      box-shadow:0 22px 70px rgba(0,0,0,.5);
+      padding:18px 18px 16px;
+    }
+
+    .modal-top{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:14px;
+      margin-bottom:10px;
+    }
+
+    .modal-title{
+      margin:0;
+      font-size:1.1rem;
+      letter-spacing:-0.01em;
+    }
+    .modal-sub{
+      margin:6px 0 0;
+      color:rgba(243,246,255,.70);
+      font-size:.92rem;
+      line-height:1.45;
+      max-width:640px;
+    }
+
+    .icon-x{
+      border:1px solid rgba(29,34,51,1);
+      background:transparent;
+      color:rgba(243,246,255,.85);
+      border-radius:12px;
+      width:38px;
+      height:38px;
+      cursor:pointer;
+      transition:transform .15s ease, opacity .15s ease;
+    }
+    .icon-x:hover{transform:translateY(-1px);opacity:1}
+
+    .pref-row{
+      display:flex;
+      gap:14px;
+      align-items:flex-start;
+      justify-content:space-between;
+      padding:14px 12px;
+      border:1px solid rgba(29,34,51,1);
+      border-radius:14px;
+      margin-top:12px;
+      background:rgba(5,7,13,.35);
+    }
+
+    .pref-label{
+      margin:0;
+      font-weight:800;
+      letter-spacing:-0.01em;
+    }
+    .pref-desc{
+      margin:6px 0 0;
+      color:rgba(243,246,255,.68);
+      font-size:.9rem;
+      line-height:1.45;
+      max-width:520px;
+    }
+
+    .toggle{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      user-select:none;
+      white-space:nowrap;
+    }
+
+    .toggle input{
+      width:auto;
+      height:auto;
+      margin:0;
+      accent-color: #6ee7b7;
+    }
+
+    .modal-actions{
+      margin-top:14px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      align-items:center;
+    }
+
+    .modal-actions .cookie-btn{
+      padding:10px 14px;
+    }
+
+    .sr-only{
+      position:absolute !important;
+      width:1px;height:1px;
+      padding:0;margin:-1px;overflow:hidden;
+      clip:rect(0,0,0,0);white-space:nowrap;border:0;
     }
   </style>
 </head>
@@ -202,8 +457,12 @@
     <div class="brand">a-brand.org</div>
     <div class="nav-links">
       <a href="#what">What we do</a>
+      <a href="#process">How we work</a>
+      <a href="#outcomes">Outcomes</a>
       <a href="#roi">ROI</a>
-      <a href="#contact" class="cta">Start a conversation</a>
+      <a href="privacy.html">Privacy</a>
+  <a href="terms.html">Terms</a>
+<a href="#contact" class="cta">Start a conversation</a>
     </div>
   </nav>
 </header>
@@ -211,38 +470,139 @@
 <main>
 
   <!-- HERO -->
-  <section class="hero-wrap">
-    <h1>AI, Content & Strategy<br>That Actually Drive Results</h1>
+  <section class="hero-wrap" id="top">
+    <span class="kicker">AI • Content • SEO • Automation</span>
+    <h1>Clarity to rise.<br>Power to build.</h1>
     <p class="sub">
-      Clear thinking. Measurable outcomes. No empty buzzwords.
-      We help companies turn AI, content and data into practical systems
-      that improve visibility, efficiency and revenue.
+      AI, content and SEO systems designed for measurable outcomes.
+      Built for execution, decision-making and durable growth — without empty buzzwords.
     </p>
-    <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap">
-      <a href="#roi" class="cta">Calculate your AI ROI</a>
-      <a href="#contact" class="cta" style="background:none;border:1px solid var(--border);color:var(--fg)">
-        Start a conversation
-      </a>
+    <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
+      <a href="#contact" class="cta">Start a conversation</a>
+      <a href="#roi" class="cta secondary">Calculate your AI ROI</a>
     </div>
+    <p class="muted-small">
+      Practical implementation across EU, UK, US and global teams. EN / PL / NL.
+    </p>
   </section>
 
   <!-- WHAT -->
   <section id="what">
-    <h2>What We Do</h2>
-    <p class="sub">Modular services that scale from quick wins to long-term partnerships.</p>
+    <h2>What we do</h2>
+    <p class="sub">
+      We design systems that connect AI, SEO, content and decision-making into one coherent growth engine.
+      Not experiments. Not trends. Operational frameworks that scale.
+    </p>
 
     <div class="grid grid-3">
       <div class="card">
         <h3>AI Strategy & Roadmapping</h3>
-        <p>Clear use-cases, realistic impact, no generic tools.</p>
+        <p class="sub" style="max-width:none;margin:0">
+          Clear use cases. Realistic impact. Structured execution tied to measurable business outcomes.
+        </p>
       </div>
+
       <div class="card">
-        <h3>Content & SEO Optimization</h3>
-        <p>Trust-building content optimized for humans and search.</p>
+        <h3>Revenue-Focused SEO</h3>
+        <p class="sub" style="max-width:none;margin:0">
+          Built around business impact — not vanity traffic. Technical foundations, IA and strategy that compound.
+        </p>
       </div>
+
+      <div class="card">
+        <h3>Content Systems & Optimization</h3>
+        <p class="sub" style="max-width:none;margin:0">
+          Content designed for clarity, authority and performance — structured for search and AI discovery.
+        </p>
+      </div>
+
       <div class="card">
         <h3>Workflow Automation</h3>
-        <p>Reduce manual work across research, content and operations.</p>
+        <p class="sub" style="max-width:none;margin:0">
+          Reduce manual effort across research, publishing and operations with pragmatic automation.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Decision Intelligence</h3>
+        <p class="sub" style="max-width:none;margin:0">
+          What gets measured gets improved. KPIs, dashboards and attribution that support better executive decisions.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Strategic Advisory</h3>
+        <p class="sub" style="max-width:none;margin:0">
+          High-level sparring for founders and teams navigating AI priorities, clarity and calm execution.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <h2>How we work</h2>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>1) Discover</h3>
+        <p class="sub" style="max-width:none;margin:0">
+          Goals, constraints, baseline data, quick audit — we find what matters and what blocks progress.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>2) Plan</h3>
+        <p class="sub" style="max-width:none;margin:0">
+          A 90-day roadmap with priorities, owners, timelines and decision checkpoints.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>3) Build</h3>
+        <p class="sub" style="max-width:none;margin:0">
+          Implementation across SEO, content and AI workflows — designed to ship, not to impress.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>4) Measure</h3>
+        <p class="sub" style="max-width:none;margin:0">
+          KPIs, reporting and iteration. We focus on durable, measurable progress.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUTCOMES -->
+  <section id="outcomes">
+    <h2>Selected outcomes</h2>
+    <p class="sub">
+      Examples of durable progress from SEO and content systems, AI enablement and execution.
+      Names available under NDA.
+      Results vary by context and execution — we focus on durable, measurable progress.
+    </p>
+
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>B2C Platform</h3>
+        <p class="sub" style="max-width:none;margin:0">
+          +118% organic YoY and faster indexation across a multi-site portfolio.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>FinTech</h3>
+        <p class="sub" style="max-width:none;margin:0">
+          +42% demo sign-ups from SEO in 90 days with measurable pipeline lift.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>B2B SaaS</h3>
+        <p class="sub" style="max-width:none;margin:0">
+          Lower CPL through content systemization and AI-assisted ops — with quality controls.
+        </p>
       </div>
     </div>
   </section>
@@ -250,32 +610,62 @@
   <!-- ROI -->
   <section id="roi">
     <h2>AI ROI Calculator</h2>
+    <p class="sub roi-intro">
+      AI initiatives should begin with clarity. Before investing further in tools, teams or infrastructure,
+      estimate the directional impact based on traffic, conversion rate and investment level.
+      This calculator is intentionally transparent — a decision-support tool, not a forecasting guarantee.
+    </p>
+
     <div class="grid grid-2">
       <div class="card">
-        <label>Monthly traffic</label>
-        <input id="traffic" type="number" value="5000">
+        <label for="traffic">Monthly traffic</label>
+        <input id="traffic" type="number" inputmode="numeric" min="0" step="50" value="1000">
 
-        <label>Conversion rate (%)</label>
-        <input id="cr" type="number" value="1.5">
+        <label for="cr">Conversion rate (%)</label>
+        <input id="cr" type="number" inputmode="decimal" min="0" step="0.1" value="1.5">
 
-        <label>Avg. lead value</label>
-        <input id="value" type="number" value="800">
+        <label for="value">Average lead value</label>
+        <input id="value" type="number" inputmode="numeric" min="0" step="10" value="800">
 
-        <label>Monthly investment</label>
-        <input id="cost" type="number" value="3000">
+        <label for="ccy">Currency</label>
+        <select id="ccy">
+          <option value="EUR" selected>EUR</option>
+          <option value="USD">USD</option>
+          <option value="PLN">PLN</option>
+        </select>
 
-        <button class="cta" style="margin-top:14px" onclick="calcROI()">Calculate</button>
+        <label for="cost">Monthly investment</label>
+        <input id="cost" type="number" inputmode="numeric" min="0" step="50" value="3000">
+
+        <button id="calcBtn" type="button" class="cta" style="margin-top:14px">Calculate</button>
+
+        <p class="roi-help">
+          Tip: adjust inputs to match your reality. Use this as a directional estimate to support decision-making.
+        </p>
       </div>
 
       <div class="card">
-        <div id="roiResult">Adjust inputs to estimate impact.</div>
+        <div class="roi-result" id="roiResult">
+          Adjust inputs to estimate impact.
+        </div>
+
+        <div class="roi-metrics" id="roiMetrics" style="display:none"></div>
+
+        <div class="roi-help" id="roiExplain" style="display:none">
+          This is a directional estimate based on your inputs (traffic × conversion × value). Investment is subtracted to show net value.
+          “Net multiple” shows net return relative to investment (e.g. 3.2×).
+        </div>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact">
-    <h2>Let’s Talk</h2>
+    <h2>Let’s build something that makes sense.</h2>
+    <p class="sub">
+      Tell us what you’re building and what “success” means in your context.
+      We’ll reply with clarity: what we’d do first, what it would change, and what it would cost.
+    </p>
 
     <form
       name="contact"
@@ -286,40 +676,368 @@
 
       <input type="hidden" name="form-name" value="contact">
 
-      <!-- honeypot -->
       <p style="display:none">
         <label>Don’t fill this out: <input name="bot-field"></label>
       </p>
 
-      <label>Name</label>
-      <input name="name" required>
+      <label for="c-name">Name</label>
+      <input id="c-name" name="name" required>
 
-      <label>Email</label>
-      <input name="email" type="email" required>
+      <label for="c-email">Email</label>
+      <input id="c-email" name="email" type="email" required>
 
-      <label>Message</label>
-      <textarea name="message" rows="4"></textarea>
+      <label for="c-message">Message</label>
+      <textarea id="c-message" name="message" rows="5" placeholder="What are you building? What should improve first?"></textarea>
 
-      <button class="cta" style="margin-top:14px">Send message</button>
+      <button class="cta" type="submit" style="margin-top:14px">Send message</button>
+
+      <p class="note">We usually reply within 1–2 business days.</p>
     </form>
   </section>
 
 </main>
 
 <footer>
-  © 2025 A-Brand. All rights reserved.
+  © 2026 A-Brand. All rights reserved. ·
+  <a href="privacy.html">Privacy</a>
+  <a href="terms.html">Terms</a>
+·
+  <a href="#" id="openCookieSettings">Cookie settings</a>
 </footer>
 
+<!-- =========================
+     COOKIE BANNER
+     ========================= -->
+<div class="cookie-banner" id="cookieBanner" role="region" aria-label="Cookie notice">
+  <div class="cookie-card">
+    <div class="cookie-text">
+      We use cookies to keep this site secure and to understand usage via analytics (optional).
+      You can accept analytics, reject, or manage your preferences.
+      See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Use</a>.
+    </div>
+    <div class="cookie-actions">
+      <button class="cookie-btn" id="rejectCookies" type="button">Reject</button>
+      <button class="cookie-btn link" id="manageCookies" type="button">Manage</button>
+      <button class="cookie-btn primary" id="acceptCookies" type="button">Accept analytics</button>
+    </div>
+  </div>
+</div>
+
+<!-- =========================
+     COOKIE MODAL
+     ========================= -->
+<div class="cookie-modal" id="cookieModal" role="dialog" aria-modal="true" aria-labelledby="cookieModalTitle">
+  <div class="modal-card">
+    <div class="modal-top">
+      <div>
+        <h3 class="modal-title" id="cookieModalTitle">Cookie preferences</h3>
+        <p class="modal-sub">
+          Choose which cookies you want to allow. Essential cookies are required for basic functionality and security.
+          Analytics cookies help us improve the site.
+        </p>
+      </div>
+      <button class="icon-x" id="closeCookieModal" type="button" aria-label="Close cookie preferences">✕</button>
+    </div>
+
+    <div class="pref-row" aria-label="Essential cookies">
+      <div>
+        <p class="pref-label">Essential</p>
+        <p class="pref-desc">Required for basic site functionality and security. Always on.</p>
+      </div>
+      <div class="toggle">
+        <span class="sr-only">Essential cookies always on</span>
+        <input type="checkbox" checked disabled aria-label="Essential cookies (always on)">
+      </div>
+    </div>
+
+    <div class="pref-row" aria-label="Analytics cookies">
+      <div>
+        <p class="pref-label">Analytics</p>
+        <p class="pref-desc">
+          Helps us understand which pages work well and where we should improve. Uses Google Analytics (GA4).
+        </p>
+      </div>
+      <label class="toggle" for="analyticsToggle">
+        <input id="analyticsToggle" type="checkbox" />
+        Allow
+      </label>
+    </div>
+
+    <div class="modal-actions">
+      <button class="cookie-btn" id="modalReject" type="button">Reject</button>
+      <button class="cookie-btn primary" id="modalSave" type="button">Save preferences</button>
+    </div>
+  </div>
+</div>
+
 <script>
-function calcROI(){
-  const t=+traffic.value||0,
-        crv=(+cr.value||0)/100,
-        v=+value.value||0;
-  const leads=t*crv,
-        revenue=leads*v;
-  roiResult.textContent =
-    `Estimated monthly value: ${Math.round(revenue).toLocaleString()} • Leads: ${Math.round(leads)}`;
-}
+/* =========================
+   ROI CALCULATOR
+   ========================= */
+(function () {
+  "use strict";
+
+  function num(val, fallback) {
+    var n = parseFloat(String(val).replace(",", "."));
+    return Number.isFinite(n) ? n : fallback;
+  }
+
+  function fmtMoney(amount, ccy) {
+    try {
+      return new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 }).format(Math.round(amount)) + " " + ccy;
+    } catch (e) {
+      return Math.round(amount).toLocaleString("en-US") + " " + ccy;
+    }
+  }
+
+  function fmtInt(x) {
+    return Math.round(x).toLocaleString("en-US");
+  }
+
+  function calc() {
+    var trafficEl = document.getElementById("traffic");
+    var crEl = document.getElementById("cr");
+    var valueEl = document.getElementById("value");
+    var costEl = document.getElementById("cost");
+    var ccyEl = document.getElementById("ccy");
+
+    var roiResult = document.getElementById("roiResult");
+    var roiMetrics = document.getElementById("roiMetrics");
+    var roiExplain = document.getElementById("roiExplain");
+
+    if (!trafficEl || !crEl || !valueEl || !costEl || !roiResult || !roiMetrics || !ccyEl) return;
+
+    var traffic = Math.max(0, num(trafficEl.value, 0));
+    var crPct = Math.max(0, num(crEl.value, 0));
+    var value = Math.max(0, num(valueEl.value, 0));
+    var cost = Math.max(0, num(costEl.value, 0));
+    var ccy = ccyEl.value || "EUR";
+
+    if (traffic > 300000) traffic = 300000;
+    if (crPct > 25) crPct = 25;
+
+    var cr = crPct / 100;
+    var leads = traffic * cr;
+    var revenue = leads * value;
+    var net = revenue - cost;
+
+    var multiple = (cost > 0) ? (net / cost) : null;
+
+    var roiPct = (cost > 0) ? (net / cost) * 100 : null;
+    var roiPctDisplay = "N/A";
+    var ROI_CAP = 800; // display cap only
+    if (roiPct !== null) {
+      roiPctDisplay = (roiPct > ROI_CAP) ? (ROI_CAP + "%+") : (roiPct.toFixed(1) + "%");
+    }
+
+    roiResult.textContent =
+      "Directional estimate based on your inputs. Adjust fields to match your context.";
+
+    var revenueStr = fmtMoney(revenue, ccy);
+    var netStr = fmtMoney(net, ccy);
+    var leadsStr = fmtInt(leads);
+
+    var multipleStr = "—";
+    if (multiple !== null) {
+      multipleStr = (Math.round(multiple * 10) / 10).toFixed(1) + "×";
+    }
+
+    roiMetrics.style.display = "block";
+    roiExplain.style.display = "block";
+
+    roiMetrics.innerHTML =
+      "Revenue: " + revenueStr +
+      " <span class='sep'>•</span> Net: " + netStr +
+      " <span class='sep'>•</span> Leads: " + leadsStr +
+      " <span class='sep'>•</span> Net multiple: " + multipleStr +
+      " <span class='sep'>•</span> ROI: " + roiPctDisplay;
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    ["traffic", "cr", "value", "cost", "ccy"].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) el.addEventListener("input", calc);
+      if (el && el.tagName === "SELECT") el.addEventListener("change", calc);
+    });
+
+    var btn = document.getElementById("calcBtn");
+    if (btn) btn.addEventListener("click", calc);
+
+    calc();
+  });
+})();
+</script>
+
+<script>
+/* =========================
+   COOKIE CONSENT (PRO)
+   - Default: no analytics
+   - Banner: Accept / Reject / Manage
+   - Modal: analytics toggle
+   - Footer: Cookie settings
+   - GA4 loads only after consent
+   ========================= */
+(function () {
+  "use strict";
+
+  var CONSENT_KEY = "aBrandConsent_v1";
+  var CONSENT_VERSION = 1;
+
+  // Your GA4 Measurement ID:
+  var GA_MEASUREMENT_ID = "G-VRPBHJ05ZL";
+
+  var banner = document.getElementById("cookieBanner");
+  var btnAccept = document.getElementById("acceptCookies");
+  var btnReject = document.getElementById("rejectCookies");
+  var btnManage = document.getElementById("manageCookies");
+
+  var modal = document.getElementById("cookieModal");
+  var btnCloseModal = document.getElementById("closeCookieModal");
+  var btnModalReject = document.getElementById("modalReject");
+  var btnModalSave = document.getElementById("modalSave");
+  var analyticsToggle = document.getElementById("analyticsToggle");
+
+  var openSettingsLink = document.getElementById("openCookieSettings");
+
+  function safeJsonParse(s) {
+    try { return JSON.parse(s); } catch(e) { return null; }
+  }
+
+  function getConsent() {
+    var raw = localStorage.getItem(CONSENT_KEY);
+    if (!raw) return null;
+    var obj = safeJsonParse(raw);
+    if (!obj || obj.version !== CONSENT_VERSION) return null;
+    return obj;
+  }
+
+  function setConsent(prefs) {
+    var obj = {
+      version: CONSENT_VERSION,
+      updatedAt: new Date().toISOString(),
+      analytics: !!prefs.analytics
+    };
+    localStorage.setItem(CONSENT_KEY, JSON.stringify(obj));
+    return obj;
+  }
+
+  function showBanner() {
+    if (banner) banner.style.display = "block";
+  }
+
+  function hideBanner() {
+    if (banner) banner.style.display = "none";
+  }
+
+  function openModal() {
+    if (!modal) return;
+    // Sync toggle with saved consent (or default false)
+    var c = getConsent();
+    if (analyticsToggle) analyticsToggle.checked = !!(c && c.analytics);
+    modal.style.display = "flex";
+  }
+
+  function closeModal() {
+    if (!modal) return;
+    modal.style.display = "none";
+  }
+
+  function loadGA4Once() {
+    if (window.__ga4Loaded) return;
+    window.__ga4Loaded = true;
+
+    // Load gtag
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(GA_MEASUREMENT_ID);
+    document.head.appendChild(s);
+
+    // Init
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ window.dataLayer.push(arguments); }
+    window.gtag = window.gtag || gtag;
+
+    window.gtag("js", new Date());
+    window.gtag("config", GA_MEASUREMENT_ID, { anonymize_ip: true });
+  }
+
+  function applyConsent(consent) {
+    // Only analytics is controlled here; essential cookies are always on.
+    if (consent && consent.analytics) {
+      loadGA4Once();
+    }
+  }
+
+  function init() {
+    var consent = getConsent();
+
+    // If no consent yet -> show banner (but do NOT load GA4)
+    if (!consent) {
+      showBanner();
+    } else {
+      hideBanner();
+      applyConsent(consent);
+    }
+
+    if (btnAccept) btnAccept.addEventListener("click", function () {
+      var c = setConsent({ analytics: true });
+      hideBanner();
+      applyConsent(c);
+    });
+
+    if (btnReject) btnReject.addEventListener("click", function () {
+      setConsent({ analytics: false });
+      hideBanner();
+      // Do nothing else (analytics stays off)
+    });
+
+    if (btnManage) btnManage.addEventListener("click", function () {
+      openModal();
+    });
+
+    if (btnCloseModal) btnCloseModal.addEventListener("click", function () {
+      closeModal();
+    });
+
+    if (btnModalReject) btnModalReject.addEventListener("click", function () {
+      setConsent({ analytics: false });
+      closeModal();
+      hideBanner();
+    });
+
+    if (btnModalSave) btnModalSave.addEventListener("click", function () {
+      var wantsAnalytics = analyticsToggle ? analyticsToggle.checked : false;
+      var c = setConsent({ analytics: wantsAnalytics });
+      closeModal();
+      hideBanner();
+      applyConsent(c);
+    });
+
+    // Footer "Cookie settings"
+    if (openSettingsLink) {
+      openSettingsLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        openModal();
+      });
+    }
+
+    // Close modal on backdrop click
+    if (modal) {
+      modal.addEventListener("click", function (e) {
+        if (e.target === modal) closeModal();
+      });
+    }
+
+    // ESC closes modal
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && modal && modal.style.display === "flex") {
+        closeModal();
+      }
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", init);
+})();
 </script>
 
 </body>

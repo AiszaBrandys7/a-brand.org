@@ -4,10 +4,5 @@
 
 [[redirects]]
   from = "/favicon.ico"
-  to = "/assets/favicon.svg"
-  status = 200
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
+  to = "/assets/favicon-a.svg"
   status = 200
